@@ -1,117 +1,246 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trabajo de Filosofía - Raúl Alberca</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trabajo de Filosofía: ¿Cómo contar mi vida?</title>
+<style>
+  /* Reset y base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9; color: #222;
+    display: flex;
+    min-height: 100vh;
+  }
+  /* Menú lateral fijo */
+  nav {
+    position: fixed;
+    top: 0; left: 0;
+    width: 260px;
+    height: 100vh;
+    background: #263238;
+    color: #f0f0f0;
+    overflow-y: auto;
+    padding: 1rem 1.5rem;
+  }
+  nav h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #fbc02d;
+    padding-bottom: 0.5rem;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  nav li {
+    margin-bottom: 0.9rem;
+  }
+  nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: #fbc02d;
+    outline: none;
+  }
+
+  /* Contenido principal */
+  main {
+    margin-left: 260px;
+    padding: 2rem 3rem;
+    max-width: 900px;
+  }
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #263238;
+    border-bottom: 3px solid #fbc02d;
+    padding-bottom: 0.5rem;
+  }
+  h2 {
+    color: #37474f;
+    border-bottom: 2px solid #fbc02d;
+    padding-bottom: 0.3rem;
+    margin-top: 3rem;
+    font-weight: 700;
+  }
+  h3 {
+    color: #455a64;
+    margin-top: 2rem;
+    font-weight: 600;
+  }
+  p {
+    line-height: 1.6;
+    margin: 1rem 0;
+  }
+  ul {
+    margin: 1rem 0 1rem 1.5rem;
+  }
+
+  /* Imágenes */
+  .img-container {
+    text-align: center;
+    margin: 1.5rem 0 2rem;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  }
+  figcaption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.4rem;
+  }
+
+  /* Scroll suave */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
     nav {
-      background-color: #34495e;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding: 1rem;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
+    main {
+      margin-left: 0;
+      padding: 1rem 1.5rem;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-      background-color: white;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #2c3e50;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #2c3e50;
-      color: white;
-      margin-top: 40px;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Trabajo de Filosofía</h1>
-    <p>Raúl Alberca · 15 años</p>
-  </header>
 
-  <nav>
-    <a href="#introduccion">Introducción</a>
-    <a href="#quien-soy">¿Quién soy yo?</a>
-    <a href="#puedo-elegir">¿Puedo elegir quién ser?</a>
-    <a href="#que-quiero">¿Qué quiero de la vida?</a>
-    <a href="#nada-mas">¿Y si no hay nada más?</a>
-    <a href="#conclusion">Conclusión</a>
-  </nav>
+<nav aria-label="Índice del trabajo de filosofía">
+  <h2>Índice</h2>
+  <ul>
+    <li><a href="#introduccion">Introducción</a></li>
+    <li><a href="#reflexion1">¿Quién soy yo? El yo como enigma</a></li>
+    <li><a href="#reflexion2">¿Puedo elegir quién ser? Libertad y sentido</a></li>
+    <li><a href="#reflexion3">¿Qué quiero de la vida? Emociones y libertad</a></li>
+    <li><a href="#reflexion4">¿Y si no hay nada más? Vivir con intensidad</a></li>
+    <li><a href="#conclusion">Conclusión: ¿Cómo contar mi vida?</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1>Trabajo de Filosofía: ¿Cómo contar mi vida?</h1>
 
   <section id="introduccion">
-    <h2>1. Introducción: ¿Tiene sentido la vida o es solo un hecho biológico?</h2>
-    <p>Todos los días nos levantamos, vamos al instituto, estudiamos, entrenamos... ¿Para qué todo esto? Camus decía que el mundo no responde, lo llamaba "el absurdo". Pero eso no significa rendirse. Podemos crear nuestro propio sentido. Frankl lo vivió en los campos de concentración: incluso en el horror, se puede encontrar un porqué para vivir. Yo pienso que el sentido lo construimos paso a paso, con nuestras acciones, decisiones y emociones.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg/640px-thumbnail.jpg" alt="Albert Camus">
+    <h2>Introducción</h2>
+    <p>¿Tiene sentido la vida o es solo un hecho biológico?<br>
+    Todos los días nos levantamos, vamos al instituto, estudiamos, entrenamos, comemos, reímos, lloramos, dormimos… Si paramos a pensar estas acciones, nos surgen varias preguntas; ¿para qué todo esto?, ¿tiene sentido vivir o simplemente estamos aquí de casualidad?</p>
+    
+    <p>El filósofo francés Albert Camus decía que el mundo no nos da respuestas claras. Nosotros queremos entender por qué estamos aquí, qué sentido tiene todo, pero el mundo no nos da respuestas. A esto Camus lo llamaba “el absurdo”. Es como si tú haces una pregunta muy importante y nadie te responde. A raíz de esto, Camus se preguntaba algo muy duro: si la vida no tiene sentido, ¿vale la pena vivirla?</p>
+
+    <div class="img-container">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Albert_Camus%2C_1957_%28cropped%29.jpg/320px-Albert_Camus%2C_1957_%28cropped%29.jpg" alt="Fotografía de Albert Camus" />
+        <figcaption>Albert Camus (1913-1960), filósofo francés.</figcaption>
+      </figure>
+    </div>
+
+    <p>Pero su respuesta no fue rendirse. Al contrario, dijo que, aunque la vida no tenga un sentido “dado” (por Dios, la naturaleza o el destino), nosotros podemos decidir vivirla igual, con fuerza, con valentía. Camus hablaba de Sísifo, (el héroe del sinsentido), un personaje que tenía que empujar una piedra enorme cuesta arriba una y otra vez. Aunque su tarea no tuviera fin ni recompensa, Camus decía que había que imaginarse a Sísifo feliz. ¿Por qué? Porque él elige seguir empujando, porque acepta su vida y la vive a su manera.</p>
+
+    <p>Por otro lado, Viktor Frankl, un psiquiatra que estuvo en campos de concentración nazis, también hablaba del sentido de la vida. Él decía que incluso en las peores situaciones, algunas personas lograban seguir adelante porque encontraban un motivo para vivir: alguien a quien amar, algo que querían hacer, un valor que querían defender. No esperaban que alguien les dijera cuál era su sentido, ellos lo creaban.</p>
+
+    <p>Entonces, aunque el mundo no nos dé respuestas claras, nosotros sí podemos construir nuestro propio sentido. No importa si la vida no viene con un manual. Podemos decidir que nuestro sentido es cuidar a los que queremos, mejorar en algo que nos gusta, ayudar a otros, aprender cosas nuevas o simplemente disfrutar de estar vivos.</p>
+
+    <p>Para mí, eso significa que no todo tiene que tener una “gran razón” para valer la pena. Hay días que parecen duros o repetitivos, como cuando entreno y no veo resultados, o estudio sin ganas. Pero si yo elijo hacerlo porque tengo una meta, porque quiero ser mejor, porque me importa, entonces eso ya tiene sentido. Y si un día pierdo el rumbo, sé que puedo volver a construirlo.</p>
+
+    <p>Vivir no es solo existir como un animal más. Es buscar y crear algo que nos mueva por dentro. No necesitamos que alguien nos dé un sentido ya hecho. El sentido lo hacemos nosotros, paso a paso, con lo que hacemos, pensamos y sentimos.</p>
   </section>
 
-  <section id="quien-soy">
-    <h2>2. ¿Quién soy yo? El yo como enigma</h2>
-    <p>Sócrates decía: “Conócete a ti mismo”. No basta con existir, hay que pensar en lo que sentimos y hacemos. Eso es vivir bien. Conocerse es un camino. Yo no tengo todas las respuestas, pero reflexionar me ayuda a entender quién soy.</p>
-    <img src="https://cdn.pixabay.com/photo/2015/08/25/20/31/philosopher-907121_960_720.jpg" alt="Sócrates y la filosofía">
+  <section id="reflexion1">
+    <h2>¿Quién soy yo? El yo como enigma</h2>
+
+    <p>A veces me pregunto quién soy realmente. No me refiero solo a mi nombre, mi edad o lo que hago cada día, sino a algo más profundo: ¿quién soy por dentro?, ¿qué me hace ser yo y no otra persona?</p>
+
+    <p>El filósofo griego Sócrates decía que lo más importante en la vida es conocerse a uno mismo. No creía que ser sabio fuera saber muchas cosas, sino más bien reconocer lo que uno no sabe. Para él, ser sabio era decir con humildad: “sé que no sé”. Y pensándolo bien, tiene razón. Porque cuando creemos que ya lo sabemos todo, dejamos de aprender.</p>
+
+    <p>Sócrates también decía que “una vida sin examen no merece ser vivida”. Eso significa que debemos pensar sobre lo que hacemos, sentimos y decidimos. Por ejemplo, yo muchas veces actúo sin pensar por qué hago lo que hago. Pero si me paro a reflexionar, empiezo a conocerme mejor: qué cosas me importan, qué me molesta, qué me hace feliz.</p>
+
+    <p>Otra idea suya que me llamó la atención es que no basta con vivir, hay que vivir bien. Vivir bien no es tener mucho dinero o fama, sino vivir con justicia, con conciencia, haciendo lo correcto. Es fácil seguir a los demás o hacer lo que todos hacen, pero vivir bien es tener el valor de seguir lo que uno cree que está bien, incluso si no es lo más fácil.</p>
+
+    <p>También me hizo pensar lo que decía sobre la muerte. Sócrates creía que no debemos temerla tanto, porque nadie sabe si es algo malo. Tal vez si pensáramos menos en la muerte como un final horrible y más en cómo vivir de verdad mientras estamos aquí, viviríamos con más libertad y menos miedo.</p>
+
+    <p>Para Sócrates, el alma es lo más valioso que tenemos. No se cuida con cosas materiales, sino con la verdad, la reflexión y el diálogo. Él no enseñaba dando respuestas, sino haciendo preguntas. Porque las preguntas nos hacen pensar por nosotros mismos. A veces, hablar con alguien y escuchar otras ideas me ha hecho ver las cosas de otro modo. Ahí es donde empieza el verdadero conocimiento.</p>
+
+    <p>Entonces, ¿quién soy yo? No lo tengo del todo claro, pero estoy en camino de descubrirlo. Y ese camino no se recorre de golpe, sino poco a poco, con cada experiencia, cada decisión y cada reflexión. Quizás no haya una sola respuesta, pero sí sé algo: conocerme a mí mismo es una parte esencial de vivir bien.</p>
   </section>
 
-  <section id="puedo-elegir">
-    <h2>3. ¿Puedo elegir quién ser? Libertad y sentido en mi vida</h2>
-    <p>Frankl decía que siempre podemos elegir nuestra actitud. Simone de Beauvoir creía que no nacemos con un destino fijo: lo construimos. La libertad no es hacer lo que sea, sino elegir con responsabilidad. Yo quiero construir mi historia sin que otros decidan por mí.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Simone_de_Beauvoir2.jpg/800px-Simone_de_Beauvoir2.jpg" alt="Simone de Beauvoir">
+  <section id="reflexion2">
+    <h2>¿Puedo elegir quién ser? Libertad y sentido en mi vida</h2>
+
+    <p>A veces parece que no podemos elegir mucho sobre nuestra vida. Nacemos en una familia, en un país, con unas normas, y a veces nos sentimos obligados a hacer lo que otros esperan de nosotros. Pero la verdad es que sí podemos elegir quién ser. Esa libertad no siempre es fácil, pero es lo que nos hace humanos.</p>
+
+    <p>El filósofo Viktor Frankl vivió una situación extrema: estuvo en campos de concentración durante la Segunda Guerra Mundial. Allí perdió todo… menos una cosa: su libertad interior. Él decía que aunque le quitaran todo, todavía podía elegir su actitud. Y eso me hace pensar: yo también puedo decidir cómo reacciono ante lo que me pasa, incluso cuando no puedo cambiar las cosas. Como cuando tengo un mal día o las cosas no salen como quiero, puedo elegir rendirme o seguir adelante.</p>
+
+    <p>Además, la libertad implica responsabilidad. No es solo hacer lo que quiero sin pensar, sino ser consciente de que mis decisiones afectan a mí y a otros. Eso me hace querer ser mejor, no solo para mí, sino para los que me rodean.</p>
+
+    <p>También he aprendido que el sentido de la vida no viene dado, sino que lo construimos con nuestras elecciones. Cada pequeño paso, cada esfuerzo, cada acto amable, suma para crear algo valioso.</p>
+
+    <div class="img-container">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Viktor_Frankl%2C_1993.jpg/320px-Viktor_Frankl%2C_1993.jpg" alt="Viktor Frankl" />
+        <figcaption>Viktor Frankl (1905-1997), psiquiatra y filósofo.</figcaption>
+      </figure>
+    </div>
+
+    <p>Así que sí, puedo elegir quién ser, aunque no siempre sea fácil. Y en esa elección está la clave para vivir con sentido, con esperanza y con fuerza.</p>
   </section>
 
-  <section id="que-quiero">
-    <h2>4. ¿Qué quiero de la vida? Emociones, deseos y libertad interior</h2>
-    <p>Spinoza decía que el deseo es la esencia del ser humano. Queremos alegría, libertad, conocernos. Las emociones a veces nos dominan, pero entenderlas nos hace libres. Yo quiero vivir con sentido, no controlado por lo que no entiendo, sino eligiendo con conocimiento.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Baruch_Spinoza.jpg/800px-Baruch_Spinoza.jpg" alt="Baruch Spinoza">
+  <section id="reflexion3">
+    <h2>¿Qué quiero de la vida? Emociones y libertad</h2>
+
+    <p>Me gusta pensar que la vida es más que sobrevivir o cumplir con lo que otros esperan. Es sentir, emocionarse, arriesgar, equivocarse y aprender. A veces el miedo me frena, pero otras veces la ilusión me impulsa a seguir.</p>
+
+    <p>El filósofo Kierkegaard decía que la vida auténtica es elegir con pasión y compromiso. No basta con dejar que todo pase, sino que tenemos que involucrarnos, tomar decisiones que realmente nos importan y vivir con intensidad.</p>
+
+    <p>También me gusta lo que decía Nietzsche: “Sin música, la vida sería un error”. La música es un ejemplo de algo que nos llena el alma y da sentido. Pero no solo la música, sino todas las cosas que nos emocionan: la amistad, el amor, la creatividad, el aprendizaje…</p>
+
+    <p>Creo que parte de vivir bien es permitirse sentir todas las emociones, no solo las buenas. La tristeza, la rabia, el miedo también forman parte de la vida y nos ayudan a crecer.</p>
+
+    <p>Al final, vivir es una aventura que vale la pena, aunque tenga momentos difíciles. Y la libertad es decidir cómo quiero vivir esa aventura.</p>
   </section>
 
-  <section id="nada-mas">
-    <h2>5. ¿Y si no hay nada más? Vivir con intensidad sin mentiras</h2>
-    <p>Nietzsche decía que si no hay un sentido dado, lo creamos nosotros. Hablaba del "eterno retorno": vivir como si fueras a repetir tu vida una y otra vez. Eso me hace pensar: ¿estoy viviendo como quiero? Yo quiero una vida con autenticidad, no solo seguir a los demás.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Nietzsche1882.jpg" alt="Friedrich Nietzsche">
+  <section id="reflexion4">
+    <h2>¿Y si no hay nada más? Vivir con intensidad</h2>
+
+    <p>Otra pregunta que me hago es qué pasa después de la muerte. No sé si hay algo más allá, o si simplemente dejamos de existir. Muchas religiones hablan de una vida después, pero también hay filósofos que dicen que esto es todo.</p>
+
+    <p>Si no hay nada más, entonces tenemos que aprovechar este único tiempo que tenemos. Como dijo Epicuro, el placer y la felicidad no están en cosas materiales, sino en la tranquilidad del alma y en disfrutar los momentos simples.</p>
+
+    <p>Me gusta pensar que vivir con intensidad no significa buscar solo diversión o placer, sino valorar cada instante, aprender de cada experiencia y ser agradecido por lo que tengo.</p>
+
+    <p>Así, aunque la vida no tenga un sentido absoluto, yo puedo darle sentido con mis actos, mis pensamientos y mis valores.</p>
   </section>
 
   <section id="conclusion">
     <h2>Conclusión: ¿Cómo contar mi vida?</h2>
-    <p>Según Hannah Arendt, la vida adquiere sentido cuando la contamos. No somos solo lo que hacemos, sino el relato que se construye a través de los demás. Yo quiero que mi vida tenga un relato propio, no perfecto, pero real, con sentido para mí y para los que me rodean. No soy solo lo que me pasa, soy lo que decido contar y construir con eso.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Hannah_Arendt_1975.jpg" alt="Hannah Arendt">
-  </section>
 
-  <footer>
-    <p>&copy; 2025 Raúl Alberca - Filosofía</p>
-  </footer>
+    <p>Contar mi vida no es solo narrar lo que hice, sino compartir lo que siento, pienso y sueño. No es fácil, porque mi vida está llena de preguntas sin respuestas claras. Pero es justo eso lo que la hace única y valiosa.</p>
+
+    <p>He aprendido que no necesito tenerlo todo resuelto para vivir con sentido. Puedo construir mi camino día a día, con libertad y responsabilidad. Que conocerme a mí mismo, elegir quién quiero ser y aceptar la incertidumbre, son pasos fundamentales.</p>
+
+    <p>Así que mi vida es un relato abierto, un proyecto en construcción. Y la forma en que la cuento será con sinceridad, con pasión y con esperanza.</p>
+
+    <p>Gracias por leer este trabajo y acompañarme en esta reflexión sobre la vida y el sentido.</p>
+  </section>
+</main>
+
 </body>
 </html>
